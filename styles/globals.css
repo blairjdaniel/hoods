@@ -1,0 +1,117 @@
+:root{
+  --bg:#0b1020;
+  --card:#0f1724;
+  --muted:#98a0b3;
+  --accent:#7c5cff;
+  --btn-grad-start: #ff5fa0;
+  --btn-grad-end: #ff9ecb;
+}
+html,body,#__next{height:100%;}
+.app-root {
+  min-height: 100%;
+}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071029 0%, #071a2f 100%);
+  color: #e6eef8;
+}
+.app-container{max-width:1100px;margin:40px auto;padding:24px;background:rgba(255,255,255,0.02);border-radius:12px}
+h1{margin:0 0 18px}
+.wallet-row{display:flex;gap:12px;align-items:center}
+.search-section,.nft-display{margin-top:18px}
+.btn {
+  font-size:14px;
+  padding:10px 14px;
+  border-radius:10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,var(--btn-grad-start),var(--btn-grad-end));
+  color: white;
+  box-shadow: 0 6px 18px rgba(255,94,139,0.14);
+}
+.btn:disabled{opacity:0.6;cursor:not-allowed}
+
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(255,94,139,0.16); }
+.btn:active{ transform: translateY(0); box-shadow: 0 6px 18px rgba(255,94,139,0.12); }
+
+.btn-compact{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  box-shadow: 0 6px 14px rgba(255,94,139,0.12);
+}
+
+input{font-size:14px;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+button{cursor:pointer}
+.trait-item{padding:8px;border-radius:8px;margin:6px 0;background:rgba(255,255,255,0.02)}
+.active-badge{margin-left:8px;background:var(--accent);color:#051827;padding:4px 8px;border-radius:999px;font-weight:600}
+
+.card {
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Landing grid and trait block */
+.landing-grid{margin-top:24px;display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+.trait-block{
+  position:relative;
+  width:100%;
+  height:auto; /* let image define the height */
+  background-size:cover;
+  background-position:center;
+  border-radius:12px;
+  overflow:hidden;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  max-width:760px; /* prevent tiles from becoming massive on wide screens */
+  margin-left:0; /* default flow; can be centered if desired */
+}
+.trait-block img.bg{
+  position:relative;
+  width:100%;
+  height:auto;
+  aspect-ratio: 1 / 1; /* keep images square */
+  object-fit:cover;
+  display:block;
+}
+.trait-block .overlay{width:100%;padding:20px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(7,10,20,0.6) 100%)}
+.trait-block h3{margin:0;color:#fff;font-size:22px}
+
+/* Mobile: make tiles full-width, image square, caption below image */
+@media (max-width: 768px){
+  .trait-block{
+    height:auto;
+    display:block;
+    border-radius:12px;
+    overflow:hidden;
+    background:transparent;
+  }
+  .trait-block img.bg{
+    position:relative;
+    inset:unset;
+    width:100%;
+    height:auto;
+    aspect-ratio: 1 / 1;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+  }
+  .trait-block .overlay{
+    background:transparent;
+    padding:10px 6px 18px 6px;
+  }
+  .trait-block h3{font-size:16px;margin:8px 0 0}
+}
+
+@media (max-width: 768px){
+  .landing-grid{grid-template-columns:1fr}
+  .trait-block{max-width:100%;}
+}
+
+/* Desktop: cap the visual size so tiles aren't massive on wide screens */
+@media (min-width: 769px){
+  .trait-block img.bg{ max-height:480px; aspect-ratio:1/1; }
+}

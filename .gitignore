@@ -1,0 +1,7 @@
+node_modules/
+.next/
+test/
+.DS_Store
+.env
+.env.local
+public/*.mp4

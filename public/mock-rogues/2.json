@@ -1,0 +1,23 @@
+{
+  "name": "Rogue #2",
+  "symbol": "ROGUE",
+  "description": "Devnet fake Rogue",
+  "image": "/assets/004.png",
+  "mint": "FakeMintDevnet2222222222222222222222222222222",
+  "collection": {
+    "name": "Rogues",
+    "family": "Rogues Collection",
+    "key": "RogueColl1111111111111111111111111111111111"
+  }
+  ,
+  "attributes": [
+    { "trait_type": "Background", "value": "Silver Mist" },
+    { "trait_type": "Back", "value": "None" },
+    { "trait_type": "Clothes", "value": "Shadowmode Hoodie" },
+    { "trait_type": "Head", "value": "Shadowmode Hoodie" },
+    { "trait_type": "Mouth", "value": "Carrot" },
+    { "trait_type": "Eyes", "value": "Cute Eyes" },
+    { "trait_type": "Fur", "value": "Xray" },
+    { "trait_type": "Carrots", "value": "Claimed" }
+  ]
+}
