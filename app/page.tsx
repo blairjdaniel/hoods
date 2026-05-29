@@ -1,12 +1,9 @@
-"use client";
-import { useState, useEffect } from "react";
-import { Connection, PublicKey } from "@solana/web3.js";
-import { useWallet } from "@solana/wallet-adapter-react";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { redirect } from 'next/navigation';
 
-interface Trait {
-  trait_type: string;
+export default function Page() {
+  // Server-side redirect to landing page so the landing page is the app root
+  redirect('/landing');
+}
   value: string;
 }
 
