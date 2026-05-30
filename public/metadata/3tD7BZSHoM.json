@@ -1,0 +1,22 @@
+{
+  "name": "Rogue Devnet #1",
+  "symbol": "ROGUE",
+  "description": "Mock token for testing — uses trait-swap/004.png as image and provided trait metadata.",
+  "image": "/trait-swap/004.png",
+  "external_url": "",
+  "attributes": [
+    { "trait_type": "Background", "value": "Silver Mist", "rarity_percent": 9 },
+    { "trait_type": "Back", "value": "None", "rarity_percent": 74 },
+    { "trait_type": "Fur", "value": "Xray", "rarity_percent": 4 },
+    { "trait_type": "Clothes", "value": "Shadowmode Hoodie", "rarity_percent": 0.8 },
+    { "trait_type": "Mouth", "value": "Carrot", "rarity_percent": 4 },
+    { "trait_type": "Eyes", "value": "Cute Eyes", "rarity_percent": 3 },
+    { "trait_type": "Head", "value": "Shadowmode Hoodie", "rarity_percent": 0.8 }
+  ],
+  "properties": {
+    "files": [
+      { "uri": "/trait-swap/004.png", "type": "image/png" }
+    ],
+    "category": "image"
+  }
+}
